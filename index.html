@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Трекер задач</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Мои задачи</h1>
+      <p class="app__counter" id="counter">Нет задач</p>
+    </header>
+
+    <form class="add-form" id="add-form" autocomplete="off">
+      <input
+        type="text"
+        id="task-input"
+        class="add-form__input"
+        placeholder="Что нужно сделать?"
+        maxlength="200"
+        aria-label="Новая задача"
+      >
+      <button type="submit" class="add-form__button">Добавить</button>
+    </form>
+
+    <nav class="filters" aria-label="Фильтр задач">
+      <button type="button" class="filters__btn is-active" data-filter="all">Все</button>
+      <button type="button" class="filters__btn" data-filter="active">Активные</button>
+      <button type="button" class="filters__btn" data-filter="done">Выполненные</button>
+    </nav>
+
+    <ul class="task-list" id="task-list"></ul>
+
+    <p class="empty" id="empty" hidden>Здесь пока пусто</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
